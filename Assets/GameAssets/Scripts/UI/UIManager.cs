@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     public bool IsPaused = false;
+    
+        //class
+        DialogueManage dialogueManager;
 
     private void Update()
     {
@@ -17,6 +20,7 @@ public class UIManager : MonoBehaviour
         {
             
             TogglePausedMenu();
+            //dialogueManager.EndDialogue(); //triggerdayken ayni zamanda end dialog olmuyor birine oncelik ver
             /*
             if (IsPaused)
             {

@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f; 
     private float jumpForce = 20f;
     
+    //door referance
+    [SerializeField] private Transform doorPosition;
+    
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
@@ -83,6 +86,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (col.gameObject.CompareTag("Door"))
         {
+            gameObject.transform.position = doorPosition.transform.position; 
+            rb.bodyType = RigidbodyType2D.Static;
             _gameManager.NextLevel();
         }
 
@@ -93,5 +98,15 @@ public class PlayerMovement : MonoBehaviour
             _gameManager.RespawnPlayer();
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("DialogueCharacter"))
+        {
+            _dialogueManager.EndDialogue();    
+        }
+
+           
     }
+}
 

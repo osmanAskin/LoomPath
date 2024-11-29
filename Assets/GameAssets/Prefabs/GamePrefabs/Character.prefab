@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 888850178081521320}
   - component: {fileID: 7002372118205425643}
   - component: {fileID: 4641230823178248780}
-  - component: {fileID: 7126846130878321603}
   m_Layer: 0
   m_Name: Character
   m_TagString: DialogueCharacter
@@ -217,36 +216,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.420187, y: 1.5271398}
   m_EdgeRadius: 0
---- !u!114 &7126846130878321603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2687224309671615003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f47e9e2da703d4489ed8204ba1e6dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines:
-    - character:
-        name: Emre Baysal
-        icon: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-      line: oglusum sana yardim etmemi istiyorsan beni dinlemeye devam et
-    - character:
-        name: Emre Baysal
-        icon: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-      line: bu leveli sana kolaylastirasbilirim fakat senden bazi isteklerim olacak
-    - character:
-        name: Emre Baysal
-        icon: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-      line: miyav der misin
-    - character:
-        name: Emre Baysal
-        icon: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-      line: lutfennnn bir kere
 --- !u!1 &6343065680510611887
 GameObject:
   m_ObjectHideFlags: 0

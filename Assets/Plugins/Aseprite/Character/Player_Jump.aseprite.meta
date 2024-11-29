@@ -210,7 +210,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Player_Jump_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +219,7 @@ ScriptedImporter:
         width: 544
         height: 480
       spriteId: ead1b28be10671a4bbe8eb7212ec33c9
-    - name: Player_Jump_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +228,7 @@ ScriptedImporter:
         width: 544
         height: 432
       spriteId: 5c898029345f8dc4fac1cd63f930ec9a
-    - name: Player_Jump_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +237,7 @@ ScriptedImporter:
         width: 576
         height: 432
       spriteId: 144df80855b751c44add2c69ab1b1bf2
-    - name: Player_Jump_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:

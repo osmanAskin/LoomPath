@@ -2601,6 +2601,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &890123552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2687224309671615003, guid: e51fbf87fb73902408cdb4ac7d0f4371, type: 3}
+  m_PrefabInstance: {fileID: 3333084333692649155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &890123556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890123552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f47e9e2da703d4489ed8204ba1e6dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - character:
+        name: osmanmete
+        icon: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+      line: selam oyunu bozduguna sevindim
+    - character:
+        name: osmanmete
+        icon: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+      line: ahahahhaah ne salak adamsin sen ya
 --- !u!1 &898531144
 GameObject:
   m_ObjectHideFlags: 0
@@ -5045,7 +5072,6 @@ GameObject:
   - component: {fileID: 8974580319070344798}
   - component: {fileID: 1989572843832385884}
   - component: {fileID: 7572991035696000180}
-  - component: {fileID: 7425761648637235530}
   m_Layer: 5
   m_Name: DialogueBoxCanvas
   m_TagString: Untagged
@@ -5133,7 +5159,7 @@ PrefabInstance:
     - target: {fileID: 4116936165741117651, guid: 980e443d33c332c43bfcf7e0ff37e879, type: 3}
       propertyPath: _dialogueManager
       value: 
-      objectReference: {fileID: 7425761648637235530}
+      objectReference: {fileID: 0}
     - target: {fileID: 8079222811927561085, guid: 980e443d33c332c43bfcf7e0ff37e879, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.04
@@ -5177,6 +5203,22 @@ PrefabInstance:
     - target: {fileID: 8141083594459771298, guid: 980e443d33c332c43bfcf7e0ff37e879, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730987216278438244, guid: 980e443d33c332c43bfcf7e0ff37e879, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730987216278438244, guid: 980e443d33c332c43bfcf7e0ff37e879, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730987216278438244, guid: 980e443d33c332c43bfcf7e0ff37e879, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+    - target: {fileID: 8730987216278438244, guid: 980e443d33c332c43bfcf7e0ff37e879, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5579,6 +5621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBoxCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5111627350235502727, guid: 57147490548fa5d46945cb4feae4ed22, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4666316469515990453, guid: 57147490548fa5d46945cb4feae4ed22, type: 3}
@@ -5809,6 +5855,22 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.25938004
       objectReference: {fileID: 0}
+    - target: {fileID: 7002372118205425643, guid: e51fbf87fb73902408cdb4ac7d0f4371, type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002372118205425643, guid: e51fbf87fb73902408cdb4ac7d0f4371, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002372118205425643, guid: e51fbf87fb73902408cdb4ac7d0f4371, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002372118205425643, guid: e51fbf87fb73902408cdb4ac7d0f4371, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5971,7 +6033,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2687224309671615003, guid: e51fbf87fb73902408cdb4ac7d0f4371, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 890123556}
   m_SourcePrefab: {fileID: 100100000, guid: e51fbf87fb73902408cdb4ac7d0f4371, type: 3}
 --- !u!114 &3343499673305465190
 MonoBehaviour:
@@ -6739,18 +6804,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7425761648637235530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412318180316883001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64c0871a0bc2dbd438457d82583da722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7572991035696000180
 MonoBehaviour:
   m_ObjectHideFlags: 0

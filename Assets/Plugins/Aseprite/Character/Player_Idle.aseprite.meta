@@ -170,7 +170,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Player_Idle_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -179,7 +179,7 @@ ScriptedImporter:
         width: 544
         height: 480
       spriteId: 3154bf9d044215e4fab51dccf432c4bf
-    - name: Player_Idle_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:

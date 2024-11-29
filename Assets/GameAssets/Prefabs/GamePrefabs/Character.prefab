@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 888850178081521320}
   - component: {fileID: 7002372118205425643}
   - component: {fileID: 4641230823178248780}
+  - component: {fileID: 6909321701904956347}
   m_Layer: 0
   m_Name: Character
   m_TagString: DialogueCharacter
@@ -216,6 +217,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.420187, y: 1.5271398}
   m_EdgeRadius: 0
+--- !u!114 &6909321701904956347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687224309671615003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f47e9e2da703d4489ed8204ba1e6dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - character:
+        name: Abdullah Ahmet Askin
+        icon: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+      line: konsma 1
+    - character:
+        name: Abdullah Ahmet Askin
+        icon: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+      line: konsuma 2
 --- !u!1 &6343065680510611887
 GameObject:
   m_ObjectHideFlags: 0

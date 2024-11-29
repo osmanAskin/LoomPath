@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //class
+    PlayerFallControl playerFallControl;
+    
+    //variables
     public bool isOnObject = false;
     public bool hasPlayerKey = false;
     public bool worked = false;

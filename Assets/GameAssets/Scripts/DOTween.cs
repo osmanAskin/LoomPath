@@ -10,7 +10,5 @@ public class DOTween : MonoBehaviour
 
     private void TrapAnimation()
     {
-        
     }
-
 }

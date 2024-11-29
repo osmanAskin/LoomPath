@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net.Mail;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -91,27 +92,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsDead" , true);
             _gameManager.RespawnPlayer();
         }
-/*
-        if (col.CompareTag("DialogueCharacter"))
-        {
-            if (_dialogueManager != null)
-            {
-                _dialogueManager.StartDialogue();
-            }
-        }
     }
-
-    
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("DialogueCharacter"))
-        {
-            _dialogueManager.StopDialogue();
-            StartCoroutine(_dialogueManager.WaitForDialogue());
-        }
-        
-    }
-    */
-}
     }
 

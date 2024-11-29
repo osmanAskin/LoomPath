@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/GameAssets/Scenes/OtherScenes/LoginScene.unity
     guid: 2bc3d5d7fe4e1774eb976e9cf06c61e8
   - enabled: 1
-    path: Assets/GameAssets/Scenes/NewLevels/Level.unity
-    guid: 724c1dc332b926343b2d18abd6111b4f
-  - enabled: 0
-    path: Assets/GameAssets/Scenes/NewLevels/Level 1.unity
-    guid: ed3195f2a0d626646ac6b0605caa4aeb
+    path: Assets/GameAssets/Scenes/CurrentLevels/Level.unity
+    guid: d33d918664048e94f9b471457c9cca36
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/CurrentLevels/Level 2.unity
+    guid: 10e033bfd7b513b42acb61e1977ccce5
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/CurrentLevels/Level 3.unity
+    guid: a05bc063604c14a47aa4fb3deeadc72a
   - enabled: 1
     path: Assets/GameAssets/Scenes/OtherScenes/ResultScene.unity
     guid: 4ac3bc1f3e4ebb844bfea6b347ae6c6e

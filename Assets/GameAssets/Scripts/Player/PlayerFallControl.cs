@@ -26,7 +26,7 @@ public class PlayerFallControl : MonoBehaviour
         
             if (hasAnimationPlayed >= 1)
             {
-                CharacterAnimator.SetBool("Character", true);
+                CharacterAnimator.SetBool("CharacterCome", true);
                 //hasFinish = true;
                 //DontDestroyOnLoad(character);
             }

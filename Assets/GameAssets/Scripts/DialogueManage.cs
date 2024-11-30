@@ -21,13 +21,16 @@ public class DialogueManage : MonoBehaviour
 
     public bool isDialogueActive = false;
 
-    public float typingSpeed = 0.2f;
+    public float typingSpeed = 0.1f;
 
     public Animator animator;
     public Animator TrueAnswerPlatformAnimator;
     public Animator FalseAnswerPlatformAnimator;
+    public Animator CharacterAnimator;
     
-
+    //check slove question
+    public bool hasSloveQuestion = false;
+    
     //mathf
     private int correctAnswer;
     public TMP_InputField mathInputField;
@@ -120,14 +123,19 @@ public class DialogueManage : MonoBehaviour
                 Debug.Log("Doğru!");
                 TrueAnswerPlatformAnimator.SetTrigger("CorrectAnswer");
                 StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.3f, 0.2f));
+                CharacterAnimator.SetBool("CharacterCome" , false);
+                CharacterAnimator.SetBool("CharacterExit",true);
+                hasSloveQuestion = true;
             }
             else
             {
                 Debug.Log("Yanlış!");
                 FalseAnswerPlatformAnimator.SetTrigger("WrongAnswer");
                 StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.3f, 0.2f));
-                //burada eger yanlis bilirse daha da zorlassin
-                
+                CharacterAnimator.SetBool("CharacterCome" , false);
+                CharacterAnimator.SetBool("CharacterExit",true);
+                hasSloveQuestion = true;
+
             }
         }
         else

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
  
@@ -25,7 +26,13 @@ public class Dialogue
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
- 
+    public DialogueManage dialogueManage;
+
+    private void Start()
+    {
+        dialogueManage = FindObjectOfType<DialogueManage>();
+    }
+
     public void TriggerDialogue()
     {
         DialogueManage.Instance.StartDialogue(dialogue);
@@ -35,7 +42,11 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            TriggerDialogue();
+            if (dialogueManage.hasSloveQuestion == false)//kullanicinin dogru veya yanlis cevap verdigine degisen bir degisken ata
+            {
+                TriggerDialogue();    
+            }
+            
         }
     }
 }

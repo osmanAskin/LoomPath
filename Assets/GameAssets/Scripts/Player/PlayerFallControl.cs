@@ -17,8 +17,8 @@ public class PlayerFallControl : MonoBehaviour
     [SerializeField] private GameObject character;
     private static int hasAnimationPlayed = 0;
     private bool hasFinish = false;
-    
-    private float fallThreshold = -8f;
+
+    [SerializeField] private float fallThreshold = -8f;
 
     private void Start()
     {

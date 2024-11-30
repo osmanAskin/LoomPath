@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer; 
-    private float speed = 8f; 
-    private float jumpForce = 20f;
+    private float speed = 10f; 
+    private float jumpForce = 40f;
     
     //door referance
     [SerializeField] private Transform doorPosition;
@@ -86,9 +86,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (col.gameObject.CompareTag("Door"))
         {
-            gameObject.transform.position = doorPosition.transform.position; 
-            rb.bodyType = RigidbodyType2D.Static;
-            _gameManager.NextLevel();
+            if (_gameManager.hasPlayerKey)
+            {
+                gameObject.transform.position = doorPosition.transform.position; 
+                rb.bodyType = RigidbodyType2D.Static;
+                _gameManager.NextLevel();   
+            }
         }
 
         if (col.CompareTag("Trap"))

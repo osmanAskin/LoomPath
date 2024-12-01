@@ -12,7 +12,7 @@ public class TrapController : MonoBehaviour
     
     [SerializeField] private float moveAmountX;
     [SerializeField] private float moveAmountY;
-    [SerializeField] private float moveAmountZ;
+    //[SerializeField] private float moveAmountZ;
     [SerializeField] private float duration;
 
     private bool isTrigger = false;
@@ -24,7 +24,7 @@ public class TrapController : MonoBehaviour
             {
                 isTrigger = true;
                 //trap.transform.DOMove(new Vector3(moveAmountX,moveAmountY,moveAmountZ), duration);
-                trap.transform.DOMoveX(moveAmountX ,duration);
+                trap.transform.DOMove(new Vector2(moveAmountX , moveAmountY), duration);
             }
 
         }

@@ -96,8 +96,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (col.CompareTag("Trap"))
         {
-            rb.bodyType = RigidbodyType2D.Static;    
-            animator.SetBool("IsDead" , true);
+            rb.bodyType = RigidbodyType2D.Static;
+            transform.DOScale(0.1f, 0.2f);
+            
             _gameManager.RespawnPlayer();
         }
     }

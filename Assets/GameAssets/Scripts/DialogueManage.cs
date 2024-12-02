@@ -99,22 +99,39 @@ public class DialogueManage : MonoBehaviour
     
     void AskMathQuestion()
     {
+        /*
+         //toplama islemi 
         int num1 = Random.Range(1, 11);
         int num2 = Random.Range(1, 11);
         
         correctAnswer = num1 + num2;
         
         dialogueArea.text = $"Hadi biraz matematik yapalım! {num1} + {num2} = ?";
+        */
+        
+        //yuvarlama islemi
+        float randomFloat = Random.Range(10.5f, 99.9f);
+        
+        int roundedAnswer = Mathf.RoundToInt(randomFloat);
+        correctAnswer = roundedAnswer;
+        
+        dialogueArea.text = $"Bu sayıyı yuvarlayın: {randomFloat}\nEn yakın tam sayı nedir?";
         
         mathInputField.gameObject.SetActive(true);
         submitAnswerButton.gameObject.SetActive(true);
         ContiuneButton.gameObject.SetActive(false);
         RejectButton.gameObject.SetActive(false);
     }
-    
+
     void CheckMathAnswer()
     {
         string userInput = mathInputField.text;
+        
+        if (string.IsNullOrEmpty(userInput))
+        {
+            Debug.Log("Lütfen bir cevap girin.");
+            return;
+        }
         
         if (int.TryParse(userInput, out int userAnswer))
         {
@@ -123,24 +140,28 @@ public class DialogueManage : MonoBehaviour
                 Debug.Log("Doğru!");
                 TrueAnswerPlatformAnimator.SetTrigger("CorrectAnswer");
                 StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.3f, 0.2f));
-                CharacterAnimator.SetBool("CharacterCome" , false);
-                CharacterAnimator.SetBool("CharacterExit",true);
+                CharacterAnimator.SetBool("CharacterCome", false);
+                CharacterAnimator.SetBool("CharacterExit", true);
                 hasSloveQuestion = true;
             }
+            
             else
             {
                 Debug.Log("Yanlış!");
                 FalseAnswerPlatformAnimator.SetTrigger("WrongAnswer");
                 StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.3f, 0.2f));
-                CharacterAnimator.SetBool("CharacterCome" , false);
-                CharacterAnimator.SetBool("CharacterExit",true);
+                CharacterAnimator.SetBool("CharacterCome", false);
+                CharacterAnimator.SetBool("CharacterExit", true);
                 hasSloveQuestion = true;
 
             }
+
         }
+
         else
         {
-            Debug.Log("Lütfen geçerli bir sayı girin.");
+            Debug.Log("InputField is Null");    
+            return;
         }
         
         mathInputField.gameObject.SetActive(false);

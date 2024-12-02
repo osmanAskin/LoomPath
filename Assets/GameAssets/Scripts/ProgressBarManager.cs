@@ -22,7 +22,7 @@ public class ProgressBarManager : MonoBehaviour
             }
         }
         
-        else if (currentSceneIndex == 1)
+        else if (currentSceneIndex == 1 && currentSceneIndex == 6)
         {
             for (int i = 0; i <= currentSceneIndex && i < progressImages.Count; i++)
             {
@@ -30,7 +30,7 @@ public class ProgressBarManager : MonoBehaviour
             }
         }
         
-        else if (currentSceneIndex == 2)
+        else if (currentSceneIndex == 2 && currentSceneIndex == 7)
         {
             for (int i = 0; i <= currentSceneIndex && i < progressImages.Count; i++)
             {
@@ -38,7 +38,7 @@ public class ProgressBarManager : MonoBehaviour
             }
         }
         
-        else if (currentSceneIndex == 3)
+        else if (currentSceneIndex == 3 && currentSceneIndex == 8)
         {
             for (int i = 0; i <= currentSceneIndex && i < progressImages.Count; i++)
             {

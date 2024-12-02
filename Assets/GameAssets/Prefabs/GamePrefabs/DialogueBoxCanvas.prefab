@@ -426,6 +426,10 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.1
   animator: {fileID: 2856865507548883645}
+  TrueAnswerPlatformAnimator: {fileID: 0}
+  FalseAnswerPlatformAnimator: {fileID: 0}
+  CharacterAnimator: {fileID: 0}
+  hasSloveQuestion: 0
   mathInputField: {fileID: 6330095568440381571}
   submitAnswerButton: {fileID: 6458191243480649397}
   ContiuneButton: {fileID: 4746701873183126433}
@@ -933,7 +937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &153407220204247974
 RectTransform:
   m_ObjectHideFlags: 0

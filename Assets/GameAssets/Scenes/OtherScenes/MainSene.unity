@@ -3773,7 +3773,7 @@ MonoBehaviour:
   isOnObject: 0
   hasPlayerKey: 0
   worked: 0
-  transition: {fileID: 2475569373897585207}
+  transition: {fileID: 2737523827354657560}
 --- !u!1 &3180860932002402558
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,10 +11,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     public bool IsPaused = false;
     
+    //[SerializeField] private Animator fadeAnimator;
+    
         //class
         DialogueManage dialogueManager;
-
-    private void Update()
+        
+        private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -42,8 +44,10 @@ public class UIManager : MonoBehaviour
      IsPaused = !IsPaused;
      pauseMenu.SetActive(IsPaused);
 
+     /*
      if (IsPaused) { Time.timeScale = 0;}
      else { Time.timeScale = 1;}
+    */
     }
 
     public void StartButton()
@@ -71,6 +75,4 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
-    
 }

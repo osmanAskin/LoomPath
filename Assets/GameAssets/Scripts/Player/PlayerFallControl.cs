@@ -16,7 +16,7 @@ public class PlayerFallControl : MonoBehaviour
 
     [SerializeField] private GameObject character;
     private static int hasAnimationPlayed = 0;
-    private bool hasFinish = false;
+    //private bool hasFinish = false;
 
     [SerializeField] private float fallThreshold = -8f;
 
@@ -27,25 +27,15 @@ public class PlayerFallControl : MonoBehaviour
             if (hasAnimationPlayed >= 1)
             {
                 CharacterAnimator.SetBool("CharacterCome", true);
-                //hasFinish = true;
-                //DontDestroyOnLoad(character);
             }
-
-            if (hasFinish)
-            {
-                CharacterAnimator.SetBool("Finish", true);
-            }
-        
 
             Debug.Log("start  " +  hasAnimationPlayed);
-        
     }
 
     private void Update()
     {
         if (transform.position.y < fallThreshold)
         {
-
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.1f));
             _gameManager.RespawnPlayer();
             hasAnimationPlayed++;

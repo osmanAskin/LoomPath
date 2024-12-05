@@ -21,7 +21,7 @@ public class DialogueManage : MonoBehaviour
 
     public bool isDialogueActive = false;
 
-    public float typingSpeed = 0.1f;
+    public float typingSpeed = 0.0010f;//suanlik kullanılmıyor
 
     public Animator animator;
     public Animator TrueAnswerPlatformAnimator;
@@ -87,7 +87,7 @@ public class DialogueManage : MonoBehaviour
         foreach (char letter in dialogueLine.line.ToCharArray())
         {
             dialogueArea.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(0.001f); // Neredeyse anlık yazım
         }
     }
 

@@ -75,4 +75,21 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void OpenGoogleAccountWebsite(string url)
+    {
+        Application.OpenURL(url);
+    }
+
+    public void OpenTwitterAccount(string url)
+    {
+        Application.OpenURL(url);
+    }
+
+    public void OpenLinkedinAccount(string url)
+    {
+        Application.OpenURL(url);
+    }
+    
+
 }

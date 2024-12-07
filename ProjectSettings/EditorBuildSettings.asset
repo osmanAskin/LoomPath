@@ -12,28 +12,40 @@ EditorBuildSettings:
     path: Assets/GameAssets/Scenes/OtherScenes/LoginScene.unity
     guid: 2bc3d5d7fe4e1774eb976e9cf06c61e8
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterOne/1.Level-1.unity
+    path: Assets/GameAssets/Scenes/1/1Level-1.unity
+    guid: 38ec1b37ea13068498b920fce1251b8d
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/1/1Level-2.unity
+    guid: 5d91f173dea164e4dba505c4eb8e4dff
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/1/1Level-3.unity
+    guid: 1a25998ed861522428f5fa73a392d9a4
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/1/1Level-4.unity
+    guid: 59205548dd4250841a33de180bfa603b
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/2/2Level-1.unity
     guid: d33d918664048e94f9b471457c9cca36
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterOne/1.Level-2.unity
+    path: Assets/GameAssets/Scenes/2/2Level-2.unity
     guid: 10f0a550db8ada8488037d812bc30ca9
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterOne/1.Level-3.unity
+    path: Assets/GameAssets/Scenes/2/2Level-3.unity
     guid: 50a4a93fba5dcc240a6535174f8fa8dd
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterOne/1.Level-4.unity
+    path: Assets/GameAssets/Scenes/2/2Level-4.unity
     guid: 6794a86448b240c4294587c6439dd64a
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterTwo/2Level-1.unity
+    path: Assets/GameAssets/Scenes/3/3Level-1.unity
     guid: a9542a2f0cff80a418122d517607e8d0
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterTwo/2Level-2.unity
+    path: Assets/GameAssets/Scenes/3/3Level-2.unity
     guid: 4bab9e78d0597dc459b336eb3f42baf3
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterTwo/2Level-3.unity
+    path: Assets/GameAssets/Scenes/3/3Level-3.unity
     guid: 10f0df0e854a2c04893db41fb4202599
   - enabled: 1
-    path: Assets/GameAssets/Scenes/ChapterTwo/2Level-4.unity
+    path: Assets/GameAssets/Scenes/3/3Level-4.unity
     guid: 17602e55d1485774d9c2417c59acd62b
   - enabled: 1
     path: Assets/GameAssets/Scenes/OtherScenes/ResultScene.unity

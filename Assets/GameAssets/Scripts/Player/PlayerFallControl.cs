@@ -28,7 +28,7 @@ public class PlayerFallControl : MonoBehaviour
             {
                 CharacterAnimator.SetBool("CharacterCome", true);
             }
-
+            
             Debug.Log("start  " +  hasAnimationPlayed);
     }
 

@@ -8,16 +8,18 @@ using UnityEngine.SceneManagement;
 public class ResultManager : MonoBehaviour
 {
     [SerializeField] private TMPro.TMP_Text resultText;
+    [SerializeField] private TMPro.TMP_Text usersText;
 
     private void Start()
     {
         string userName = LoginManager.UserName;
         float elapsedTime = GameScoreTimer.ElapsedTime;
         
-        resultText.text = $"{userName}, oyunu {elapsedTime:F2} saniyede tamamladınız!";
+        resultText.text = elapsedTime.ToString("F2");
+        usersText.text = userName;
     }
 
-    public void RestartButton()
+    public void BackToTheMainMenuButton()
     {
         SceneManager.LoadScene(0);
         Debug.Log("RestartButton clicked");

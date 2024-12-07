@@ -10,7 +10,9 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     public bool IsPaused = false;
-    
+
+    [SerializeField] private Rigidbody2D playerRb;
+
     //[SerializeField] private Animator fadeAnimator;
     
         //class
@@ -20,34 +22,27 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
             TogglePausedMenu();
-            //dialogueManager.EndDialogue(); //triggerdayken ayni zamanda end dialog olmuyor birine oncelik ver
-            /*
-            if (IsPaused)
-            {
-                
-                Cursor.lockState = CursorLockMode.None; // Fareyi serbest bırak
-                Cursor.visible = true;    
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
-            */
         }
     }
 
     private void TogglePausedMenu()
     {
-     IsPaused = !IsPaused;
-     pauseMenu.SetActive(IsPaused);
+            IsPaused = !IsPaused;
+            pauseMenu.SetActive(IsPaused);
 
-     /*
-     if (IsPaused) { Time.timeScale = 0;}
-     else { Time.timeScale = 1;}
-    */
+            if (IsPaused)
+            {
+                //playerRb.bodyType = RigidbodyType2D.Static;
+                Time.timeScale = 0f;
+            }
+
+            
+            if (!IsPaused)
+            {
+                Time.timeScale = 1f;
+            }
+
     }
 
     public void StartButton()
@@ -65,17 +60,26 @@ public class UIManager : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
     public void QuitButton()
     {
         Application.Quit();
+        Time.timeScale = 1f;
     }
     
     public void RestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 
+    public void ResumeButton()
+    {
+        playerRb.bodyType = RigidbodyType2D.Dynamic;
+        Time.timeScale = 1f;
+    }
+    
     public void OpenGoogleAccountWebsite(string url)
     {
         Application.OpenURL(url);

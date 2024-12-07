@@ -8,6 +8,10 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //coyote time
+    [SerializeField] private float coyoteTime = 0.2f;
+    [SerializeField] private float coyoteTimeCounter;
+    
     private float horizontal;
     private bool isFacingRight = true;
 
@@ -34,33 +38,37 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        
-        //animator.SetFloat("Speed", Mathf.Abs(horizontal));
-        
-        if (Input.GetButtonDown("Jump") && isGrounded())
+
+        if (isGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce); //TODO;
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            coyoteTimeCounter = 0f;
         }
 
         if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        
-        if (isGrounded() != true)
-        {
-            //animator.SetTrigger("JumpTrigger");
-        }
 
         Flip();
     }
+    
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
-    private bool isGrounded()
+    public bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
@@ -112,5 +120,6 @@ public class PlayerMovement : MonoBehaviour
 
            
     }
+    
 }
 

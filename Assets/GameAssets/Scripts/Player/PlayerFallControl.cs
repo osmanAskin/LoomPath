@@ -43,7 +43,7 @@ public class PlayerFallControl : MonoBehaviour
             hasAnimationPlayed++;
             
             //audio
-            _audioManager.Play(SoundType.PlayerDead);
+            //_audioManager.Play(SoundType.PlayerDead);
         }
         
     }

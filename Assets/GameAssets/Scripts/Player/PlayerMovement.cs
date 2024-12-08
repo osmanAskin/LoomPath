@@ -12,25 +12,32 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.2f;
     [SerializeField] private float coyoteTimeCounter;
     
+    //buffer
+    [SerializeField] private float jumpBufferTime = 0.2f;
+    [SerializeField] private float jumpBufferCounter;
+    
     private float horizontal;
     private bool isFacingRight = true;
 
     [SerializeField] private Animator animator;
     
+    //classes referance
     private GameManager _gameManager;
     [SerializeField] private DialogueManage _dialogueManager; 
+    private AudioManager _audioManager;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer; 
     private float speed = 10f; 
-    private float jumpForce = 40f;
+    private float jumpForce = 20f;
     
     //door referance
     [SerializeField] private Transform doorPosition;
     
     private void Start()
     {
+        _audioManager = FindObjectOfType<AudioManager>();
         _gameManager = FindObjectOfType<GameManager>();
         _dialogueManager = FindObjectOfType<DialogueManage>();
     }
@@ -48,15 +55,31 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0f)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            coyoteTimeCounter = 0f;
+            jumpBufferCounter = jumpBufferTime;
         }
 
-        if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;    
+        }
+        
+        if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+
+            jumpBufferCounter = 0f;
+            
+            //audio
+            _audioManager.Play(SoundType.PlayerJump);
+        }
+
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            
+            coyoteTimeCounter = 0f;
         }
 
         Flip();
@@ -99,6 +122,9 @@ public class PlayerMovement : MonoBehaviour
                 gameObject.transform.position = doorPosition.transform.position; 
                 rb.bodyType = RigidbodyType2D.Static;
                 _gameManager.NextLevel();   
+                
+                //audio
+                _audioManager.Play(SoundType.Door);
             }
         }
 
@@ -108,6 +134,9 @@ public class PlayerMovement : MonoBehaviour
             transform.DOScale(0.0f, 0.2f);
             
             _gameManager.RespawnPlayer();
+            
+            //audio
+            _audioManager.Play(SoundType.PlayerDead);
         }
     }
 
@@ -122,4 +151,3 @@ public class PlayerMovement : MonoBehaviour
     }
     
 }
-

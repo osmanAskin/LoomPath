@@ -7,6 +7,9 @@ using UnityEngine.Tilemaps;
 
 public class TrapController : MonoBehaviour
 {
+    
+    //class
+    AudioManager audioManager;
     //[SerializeField] private Tilemap tilemapPiece;
     [SerializeField] private GameObject trap;
     
@@ -16,6 +19,12 @@ public class TrapController : MonoBehaviour
     [SerializeField] private float duration;
 
     private bool isTrigger = false;
+
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (isTrigger != true)
@@ -25,6 +34,10 @@ public class TrapController : MonoBehaviour
                 isTrigger = true;
                 //trap.transform.DOMove(new Vector3(moveAmountX,moveAmountY,moveAmountZ), duration);
                 trap.transform.DOMove(new Vector2(moveAmountX , moveAmountY), duration);
+                
+                //audio
+                audioManager.Play(SoundType.PlatfomTrigger);
+                
             }
 
         }

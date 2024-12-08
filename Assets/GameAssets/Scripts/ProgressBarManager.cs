@@ -17,7 +17,7 @@ public class ProgressBarManager : MonoBehaviour
     private void Update()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex - 2;
-        Debug.Log(currentSceneIndex);
+        //Debug.Log(currentSceneIndex);
         //var SceneIndex = SceneManager.GetActiveScene().buildIndex;
         
         if (currentSceneIndex == 0)

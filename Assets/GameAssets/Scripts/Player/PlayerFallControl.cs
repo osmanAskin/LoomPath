@@ -10,7 +10,8 @@ public class PlayerFallControl : MonoBehaviour
     private CameraShake cameraShake;
     private PlayerMovement playerMovement;
     private GameManager _gameManager;
-
+    private AudioManager _audioManager; 
+    
     //animator
     [SerializeField] private Animator CharacterAnimator;
 
@@ -23,6 +24,7 @@ public class PlayerFallControl : MonoBehaviour
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
+        _audioManager = FindObjectOfType<AudioManager>();
         
             if (hasAnimationPlayed >= 1)
             {
@@ -39,6 +41,9 @@ public class PlayerFallControl : MonoBehaviour
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.1f));
             _gameManager.RespawnPlayer();
             hasAnimationPlayed++;
+            
+            //audio
+            _audioManager.Play(SoundType.PlayerDead);
         }
         
     }

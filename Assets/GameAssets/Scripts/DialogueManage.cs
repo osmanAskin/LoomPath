@@ -36,7 +36,7 @@ public class DialogueManage : MonoBehaviour
     public TMP_InputField mathInputField;
     public Button submitAnswerButton;
     public Button ContiuneButton;
-    public Button RejectButton;
+    //public Button RejectButton;
 
     private void Awake()
     {
@@ -120,7 +120,7 @@ public class DialogueManage : MonoBehaviour
         mathInputField.gameObject.SetActive(true);
         submitAnswerButton.gameObject.SetActive(true);
         ContiuneButton.gameObject.SetActive(false);
-        RejectButton.gameObject.SetActive(false);
+        //RejectButton.gameObject.SetActive(false);
     }
 
     void CheckMathAnswer()
@@ -167,7 +167,7 @@ public class DialogueManage : MonoBehaviour
         mathInputField.gameObject.SetActive(false);
         submitAnswerButton.gameObject.SetActive(false);
         ContiuneButton.gameObject.SetActive(true);
-        RejectButton.gameObject.SetActive(true);
+        //RejectButton.gameObject.SetActive(true);
         
         EndDialogue();
     }

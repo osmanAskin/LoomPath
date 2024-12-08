@@ -10,10 +10,6 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     public bool IsPaused = false;
-
-    //[SerializeField] private Rigidbody2D playerRb;
-
-    //[SerializeField] private Animator fadeAnimator;
     
         //class
         DialogueManage dialogueManager;
@@ -34,15 +30,19 @@ public class UIManager : MonoBehaviour
             if (IsPaused)
             {
                 //playerRb.bodyType = RigidbodyType2D.Static;
-                //Time.timeScale = 0f;
+                Time.timeScale = 0f;
             }
 
             
-            if (!IsPaused)
+            else
             {
-                //Time.timeScale = 1f;
+                Time.timeScale = 1f;
             }
+    }
 
+    private void OnEnable()
+    {
+        Time.timeScale = 1f;
     }
 
     public void StartButton()
@@ -73,7 +73,7 @@ public class UIManager : MonoBehaviour
 
     public void ResumeButton()
     {
-        
+        OnEnable();
     }
     
     public void OpenGoogleAccountWebsite(string url)

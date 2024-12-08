@@ -130,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (col.CompareTag("Trap"))
         {
+            StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.1f));
             rb.bodyType = RigidbodyType2D.Static;
             transform.DOScale(0.0f, 0.2f);
             

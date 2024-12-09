@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class KeyAnimation : MonoBehaviour
 {
-    [SerializeField] private float movementRange = 3f; // Hareket mesafesi
-    [SerializeField] private float speed = 2f; // Hareket hızı
+    [SerializeField] private float movementRange = 3f;
+    [SerializeField] private float speed = 2f; 
 
-    [SerializeField] private float startYPosition; // Başlangıç Y pozisyonu
+    [SerializeField] private float startYPosition;
 
     private void Start()
     {

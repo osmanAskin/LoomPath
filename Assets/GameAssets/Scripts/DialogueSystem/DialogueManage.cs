@@ -36,7 +36,6 @@ public class DialogueManage : MonoBehaviour
     public TMP_InputField mathInputField;
     public Button submitAnswerButton;
     public Button ContiuneButton;
-    //public Button RejectButton;
 
     private void Awake()
     {
@@ -72,8 +71,7 @@ public class DialogueManage : MonoBehaviour
         }
 
         DialogueLine currentLine = lines.Dequeue();
-
-        //characterIcon.sprite = currentLine.character.icon;
+        
         characterName.text = currentLine.character.name;
 
         StopAllCoroutines();
@@ -87,7 +85,7 @@ public class DialogueManage : MonoBehaviour
         foreach (char letter in dialogueLine.line.ToCharArray())
         {
             dialogueArea.text += letter;
-            yield return new WaitForSeconds(0.001f); // Neredeyse anlık yazım
+            yield return new WaitForSeconds(0.001f);
         }
     }
 
@@ -99,16 +97,6 @@ public class DialogueManage : MonoBehaviour
     
     void AskMathQuestion()
     {
-        /*
-         //toplama islemi 
-        int num1 = Random.Range(1, 11);
-        int num2 = Random.Range(1, 11);
-        
-        correctAnswer = num1 + num2;
-        
-        dialogueArea.text = $"Hadi biraz matematik yapalım! {num1} + {num2} = ?";
-        */
-        
         //yuvarlama islemi
         float randomFloat = Random.Range(10.5f, 99.9f);
         
@@ -120,7 +108,6 @@ public class DialogueManage : MonoBehaviour
         mathInputField.gameObject.SetActive(true);
         submitAnswerButton.gameObject.SetActive(true);
         ContiuneButton.gameObject.SetActive(false);
-        //RejectButton.gameObject.SetActive(false);
     }
 
     void CheckMathAnswer()
@@ -167,7 +154,6 @@ public class DialogueManage : MonoBehaviour
         mathInputField.gameObject.SetActive(false);
         submitAnswerButton.gameObject.SetActive(false);
         ContiuneButton.gameObject.SetActive(true);
-        //RejectButton.gameObject.SetActive(true);
         
         EndDialogue();
     }

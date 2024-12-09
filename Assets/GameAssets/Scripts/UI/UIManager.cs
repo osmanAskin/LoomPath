@@ -29,7 +29,6 @@ public class UIManager : MonoBehaviour
 
             if (IsPaused)
             {
-                //playerRb.bodyType = RigidbodyType2D.Static;
                 Time.timeScale = 0f;
             }
 
@@ -49,12 +48,6 @@ public class UIManager : MonoBehaviour
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
-
-        /*
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        */    
-    
     }
 
     public void MainMenuButton()

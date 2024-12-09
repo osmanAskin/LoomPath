@@ -10,12 +10,11 @@ public class TrapController : MonoBehaviour
     
     //class
     AudioManager audioManager;
-    //[SerializeField] private Tilemap tilemapPiece;
+    
     [SerializeField] private GameObject trap;
     
     [SerializeField] private float moveAmountX;
     [SerializeField] private float moveAmountY;
-    //[SerializeField] private float moveAmountZ;
     [SerializeField] private float duration;
 
     private bool isTrigger = false;
@@ -31,8 +30,8 @@ public class TrapController : MonoBehaviour
         {
             if (col.gameObject.CompareTag("Player"))
             {
+                //belki sonra sequance olusturulabilir
                 isTrigger = true;
-                //trap.transform.DOMove(new Vector3(moveAmountX,moveAmountY,moveAmountZ), duration);
                 trap.transform.DOMove(new Vector2(moveAmountX , moveAmountY), duration);
                 
                 //audio

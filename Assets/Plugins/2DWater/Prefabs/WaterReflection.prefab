@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6273298641869802981}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 1, z: 0}
+  m_LocalPosition: {x: 8.49, y: 0.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68,7 +68,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 8.857265
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -157,9 +157,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6273298642273299133}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.88, y: 7.2695, z: -1}
-  m_LocalScale: {x: 0.54398304, y: 3.5, z: 1}
+  m_LocalScale: {x: 1.3762681, y: 5.0616856, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6273298641869802982}
@@ -333,11 +333,11 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 640
-  m_SurfaceLevel: 1
-  m_Density: 2
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+    m_Bits: 1
+  m_SurfaceLevel: 0.5
+  m_Density: 0.4
+  m_LinearDrag: 4
+  m_AngularDrag: 4
   m_FlowAngle: 0
   m_FlowMagnitude: 0
   m_FlowVariation: 0

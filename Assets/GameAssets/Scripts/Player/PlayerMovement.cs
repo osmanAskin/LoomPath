@@ -9,7 +9,7 @@ using DG.Tweening;
 public class PlayerMovement : MonoBehaviour
 {
     //coyote time
-    [SerializeField] private float coyoteTime = 0.2f;
+    [SerializeField] private float coyoteTime = 0.1f;
     [SerializeField] private float coyoteTimeCounter;
     
     //buffer

@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
- 
+using Random = UnityEngine.Random;
+
 public class DialogueManage : MonoBehaviour
 {
     //class
     private CameraShake cameraShake;
+    private AudioManager _audioManager;
     
     //singelton
     public static DialogueManage Instance;
@@ -44,6 +47,11 @@ public class DialogueManage : MonoBehaviour
 
         lines = new Queue<DialogueLine>();
         submitAnswerButton.onClick.AddListener(CheckMathAnswer);
+    }
+
+    private void Start()
+    {
+        _audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -130,6 +138,9 @@ public class DialogueManage : MonoBehaviour
                 CharacterAnimator.SetBool("CharacterCome", false);
                 CharacterAnimator.SetBool("CharacterExit", true);
                 hasSloveQuestion = true;
+                
+                //audio
+                _audioManager.Play(SoundType.TrueAnswerQuestion);
             }
             
             else
@@ -141,6 +152,8 @@ public class DialogueManage : MonoBehaviour
                 CharacterAnimator.SetBool("CharacterExit", true);
                 hasSloveQuestion = true;
 
+                //audio
+                _audioManager.Play(SoundType.FalseAnswerQuestion);
             }
 
         }

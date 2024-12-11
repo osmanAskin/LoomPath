@@ -9,6 +9,7 @@ TagManager:
   - Door
   - DoorTrigger
   - DialogueCharacter
+  - Water
   layers:
   - Default
   - TransparentFX

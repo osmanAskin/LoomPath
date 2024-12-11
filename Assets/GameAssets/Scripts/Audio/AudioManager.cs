@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    //[SerializeField] AudioSource musicSource;
+    //[SerializeField] AudioSource SFXSource;
     private void Awake()
     {
         foreach (var sound in sounds) 
@@ -28,7 +30,13 @@ public class AudioManager : MonoBehaviour
 public enum SoundType
 {
     PlayerJump,//
-    PlatfomTrigger,
-    Door,//
-    PlayerDead//
+    PlayerDead,//
+    PlatfomTrigger,//
+    WaterTrigger,//
+    Door,
+    Key,//
+    TrueAnswerQuestion,
+    FalseAnswerQuestion,
+    EmreBaysal
+    
 }

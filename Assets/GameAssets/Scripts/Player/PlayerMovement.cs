@@ -113,6 +113,9 @@ public class PlayerMovement : MonoBehaviour
         {
             _gameManager.PlayerTouchedKey();
             Destroy(col.gameObject);
+            
+            //audio
+            _audioManager.Play(SoundType.Key);
         }
 
         if (col.gameObject.CompareTag("Door"))
@@ -139,6 +142,12 @@ public class PlayerMovement : MonoBehaviour
             //audio
             _audioManager.Play(SoundType.PlayerDead);
         }
+        
+        if(col.CompareTag("Water"))
+        {
+            //audio
+            _audioManager.Play(SoundType.WaterTrigger);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -147,7 +156,13 @@ public class PlayerMovement : MonoBehaviour
         {
             _dialogueManager.EndDialogue();    
         }
-
+        
+        if(other.CompareTag("Water"))
+        {
+            //audio
+            _audioManager.Play(SoundType.WaterTrigger);
+        }
+        
            
     }
     

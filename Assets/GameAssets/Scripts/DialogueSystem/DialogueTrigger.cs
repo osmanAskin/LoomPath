@@ -27,10 +27,12 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public DialogueManage dialogueManage;
-
+    private AudioManager _audioManager;
+    
     private void Start()
     {
         dialogueManage = FindObjectOfType<DialogueManage>();
+        _audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void TriggerDialogue()
@@ -45,6 +47,7 @@ public class DialogueTrigger : MonoBehaviour
             if (dialogueManage.hasSloveQuestion == false)//kullanicinin dogru veya yanlis cevap verdigine degisen bir degisken ata
             {
                 TriggerDialogue();    
+                _audioManager.Play(SoundType.EmreBaysal);
             }
             
         }

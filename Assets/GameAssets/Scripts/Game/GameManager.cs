@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     {
         if (hasPlayerKey)
         {
-            StartCoroutine(LoadNextLevelWithDelay(.5f));
+            StartCoroutine(LoadNextLevelWithDelay(.5f));//.5 default value
         }
         else
         {

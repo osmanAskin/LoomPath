@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.Searcher;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
@@ -21,6 +22,9 @@ public class PlayerFallControl : MonoBehaviour
 
     [SerializeField] private float fallThreshold = -8f;
 
+    //flag
+    private bool hasPlayerDeadSound = false;
+    
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
@@ -41,9 +45,15 @@ public class PlayerFallControl : MonoBehaviour
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.1f));
             _gameManager.RespawnPlayer();
             hasAnimationPlayed++;
+
+            if (!hasPlayerDeadSound)
+            {
+                //audio
+                _audioManager.Play(SoundType.PlayerDead);
+                hasPlayerDeadSound = true;
+
+            }
             
-            //audio
-            //_audioManager.Play(SoundType.PlayerDead);
         }
         
     }

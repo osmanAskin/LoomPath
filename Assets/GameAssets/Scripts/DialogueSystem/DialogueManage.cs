@@ -105,18 +105,41 @@ public class DialogueManage : MonoBehaviour
     
     void AskMathQuestion()
     {
-        //yuvarlama islemi
-        float randomFloat = Random.Range(10.5f, 99.9f);
-        
-        int roundedAnswer = Mathf.RoundToInt(randomFloat);
-        correctAnswer = roundedAnswer;
-        
-        dialogueArea.text = $"Bu sayıyı yuvarlayın: {randomFloat}\nEn yakın tam sayı nedir?";
-        
+        // Rastgele bir yuvarlama türü seçiyoruz (0 = onluğa, 1 = yüzlüğe)
+        int roundingType = Random.Range(0, 2);
+
+        float randomFloat;
+
+        if (roundingType == 0)
+        {
+            // Onluğa yuvarlama (10 ile 100 arasında)
+            randomFloat = Random.Range(10.5f, 99.9f); // 100'den küçük
+            int roundedAnswer = Mathf.RoundToInt(randomFloat / 10) * 10; // Onluğa yuvarlama işlemi
+            correctAnswer = roundedAnswer;
+
+            // Kullanıcıya soru
+            dialogueArea.text = $"{Mathf.Floor(randomFloat)} Sayısını En Yakın Onluğa yuvarlayın\nEn yakın onlu nedir?";
+        }
+        else
+        {
+            // Yüzlüğe yuvarlama (100 ile 1000 arasında)
+            randomFloat = Random.Range(100.5f, 999.9f); // 100 ile 1000 arasında
+            int roundedAnswer = Mathf.RoundToInt(randomFloat / 100) * 100; // Yüzlüğe yuvarlama işlemi
+            correctAnswer = roundedAnswer;
+
+            // Kullanıcıya soru
+            dialogueArea.text = $"{Mathf.Floor(randomFloat)} Sayısını En Yakın Yüzlüğe yuvarlayın\nEn yakın yüzlük nedir?";
+        }
+
+        // Giriş alanını ve butonları aktif et
         mathInputField.gameObject.SetActive(true);
         submitAnswerButton.gameObject.SetActive(true);
         ContiuneButton.gameObject.SetActive(false);
     }
+
+
+
+
 
     void CheckMathAnswer()
     {

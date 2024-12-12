@@ -1,16 +1,20 @@
-# InvaderSpace(2D Unity)
+#LoomPath (2D Unity)
 >Loom Path not only offers an enjoyable gaming experience but also encourages players to develop their creative thinking and problem-solving skills. With its vibrant color design and challenging platform sections, it stimulates players' imagination, while Professor's mathematical questions add an educational dimension to the game. Our goal is for players to improve their skills while overcoming obstacles and experience mathematics in a fun context. The story, graphics, and game mechanics are carefully crafted to provide players with an unforgettable and educational adventure.
 
 
 - **Topics**: 2D Puzzle Platformer 
 - **Version**: Unity 2022.3.30f1
 - [**Download Project**](https://github.com/osmanAskin/InvaderSpace.git)
-
-![gameplay (2)](https://github.com/user-attachments/assets/cb35c0cd-0377-49ef-bccf-6acb189ddd80)
   
 
+  #GamePlay
+https://github.com/user-attachments/assets/930ddc2a-fe12-4582-92ee-49bde01fd79e
+
+
+
 # **Game UI**
-![gameplay1](![MainMenu](https://github.com/user-attachments/assets/e92e66a8-e1e6-47f8-8926-e8c057777f94))
+![MainMenu](https://github.com/user-attachments/assets/ae461749-102f-4dee-87d3-247d16785677)
+
 ![Login](https://github.com/user-attachments/assets/aa7be165-c7fb-49bb-a409-a4f2040e8bd0)
 
 ![Score](https://github.com/user-attachments/assets/48b337b6-4e2a-406b-a34e-79b154f95cec)

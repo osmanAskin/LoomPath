@@ -4,7 +4,11 @@
 
 - **Topics**: 2D Puzzle Platformer 
 - **Version**: Unity 2022.3.30f1
-- [**Download Project**]((https://github.com/osmanAskin/LoomPath))
+
+  
+## Download LoomPath
+You can download the LoomPath project from the following link:
+[Download LoomPath](https://github.com/osmanAskin/LoomPath)
   
 
 

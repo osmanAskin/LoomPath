@@ -4,12 +4,12 @@
 
 - **Topics**: 2D Puzzle Platformer 
 - **Version**: Unity 2022.3.30f1
-- [**Download Project**](https://github.com/osmanAskin/InvaderSpace.git)
+- [**Download Project**]((https://github.com/osmanAskin/LoomPath))
   
 
 
 
-
+# **GamePlay**
 https://github.com/user-attachments/assets/7f05b398-27b9-4b4e-8b5b-ac55d1444bb1
 
 
@@ -37,9 +37,3 @@ https://github.com/user-attachments/assets/7f05b398-27b9-4b4e-8b5b-ac55d1444bb1
 
 ![DialoguSystem3](https://github.com/user-attachments/assets/8eb6f9bf-b1c6-4b28-abcd-d491edcdc724)
 
-
-
-
-
-# **Atari2600**
-![image](https://github.com/osmanAskin/InvaderSpace/assets/115871580/f13207cd-c7de-4271-b745-575ebbab665e)

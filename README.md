@@ -1,4 +1,4 @@
-#LoomPath (2D Unity)
+# LoomPath (2D Unity)
 >Loom Path not only offers an enjoyable gaming experience but also encourages players to develop their creative thinking and problem-solving skills. With its vibrant color design and challenging platform sections, it stimulates players' imagination, while Professor's mathematical questions add an educational dimension to the game. Our goal is for players to improve their skills while overcoming obstacles and experience mathematics in a fun context. The story, graphics, and game mechanics are carefully crafted to provide players with an unforgettable and educational adventure.
 
 
@@ -7,8 +7,9 @@
 - [**Download Project**](https://github.com/osmanAskin/InvaderSpace.git)
   
 
-  #GamePlay
-https://github.com/user-attachments/assets/930ddc2a-fe12-4582-92ee-49bde01fd79e
+
+
+https://github.com/user-attachments/assets/d2b2a2b7-9c10-4e28-8adf-80382705f9ee
 
 
 

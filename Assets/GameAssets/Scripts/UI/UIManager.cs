@@ -2,12 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Cursor = UnityEngine.Cursor;
 
 public class UIManager : MonoBehaviour
 {
+    //audio
+    [SerializeField] private AudioMixer audioMixer;
+    private bool isMuted = false;
+    
     [SerializeField] private GameObject pauseMenu;
     public bool IsPaused = false;
     
@@ -22,6 +27,20 @@ public class UIManager : MonoBehaviour
         }
     }
 
+        
+    public void ToggleMute()//audio
+    {
+        isMuted = !isMuted;
+        if (isMuted)
+        {
+            audioMixer.SetFloat("MusicVolume", -80f);
+        }
+        else
+        {
+            audioMixer.SetFloat("MusicVolume", 0f);
+        }
+    }
+        
     private void TogglePausedMenu()
     {
             IsPaused = !IsPaused;

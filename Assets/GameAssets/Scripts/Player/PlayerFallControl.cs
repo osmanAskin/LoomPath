@@ -11,7 +11,7 @@ public class PlayerFallControl : MonoBehaviour
     private CameraShake cameraShake;
     private PlayerMovement playerMovement;
     private GameManager _gameManager;
-    private AudioManager _audioManager; 
+    private AudioManager _audioManager;
     
     //animator
     [SerializeField] private Animator CharacterAnimator;
@@ -43,6 +43,7 @@ public class PlayerFallControl : MonoBehaviour
         if (transform.position.y < fallThreshold)
         {
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.1f));
+            
             _gameManager.RespawnPlayer();
             hasAnimationPlayed++;
 

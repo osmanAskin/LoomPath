@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private GameManager _gameManager;
     [SerializeField] private DialogueManage _dialogueManager; 
     private AudioManager _audioManager;
+    private PlayerExplosion _playerExplosion;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -35,11 +36,15 @@ public class PlayerMovement : MonoBehaviour
     //door referance
     [SerializeField] private Transform doorPosition;
     
+    //player referance
+    [SerializeField] private SpriteRenderer playerGFX;
+    
     private void Start()
     {
         _audioManager = FindObjectOfType<AudioManager>();
         _gameManager = FindObjectOfType<GameManager>();
         _dialogueManager = FindObjectOfType<DialogueManage>();
+        _playerExplosion = FindObjectOfType<PlayerExplosion>();
     }
 
     private void Update()
@@ -135,7 +140,10 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.1f));
             rb.bodyType = RigidbodyType2D.Static;
-            transform.DOScale(0.0f, 0.2f);
+           //dead
+           playerGFX.enabled = false;
+           _playerExplosion.PlayerDeadExplode();
+           //transform.DOScale(0.0f, 0.2f);
             
             _gameManager.RespawnPlayer();
             

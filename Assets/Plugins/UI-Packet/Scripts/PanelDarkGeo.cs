@@ -6,6 +6,7 @@ namespace LayerLab
 {
     public class PanelDarkGeo : MonoBehaviour
     {
+        /*
         [SerializeField] private GameObject[] otherPanels;
 
         public void OnEnable()
@@ -17,5 +18,6 @@ namespace LayerLab
         {
             for (int i = 0; i < otherPanels.Length; i++) otherPanels[i].SetActive(false);
         }
+        */
     }
 }

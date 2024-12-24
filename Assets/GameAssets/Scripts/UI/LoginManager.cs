@@ -31,4 +31,9 @@ public class LoginManager : MonoBehaviour
             Debug.Log("Username is empty");
         }
     }
+
+    public void CloseSignInPanel()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

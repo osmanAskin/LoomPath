@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using DG.Tweening;
 
 public class PlayerExplosion : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class PlayerExplosion : MonoBehaviour
     [SerializeField] private float ExplosionRadius = 5f;
     
     [SerializeField] private List<GameObject> explodePiece;
-    
 
     public void Explode()
     {
@@ -43,6 +43,11 @@ public class PlayerExplosion : MonoBehaviour
                 Vector2 randomDirection = Random.insideUnitCircle.normalized;
                 rb.AddForce(randomDirection * ExplosionForceMulti, ForceMode2D.Impulse);
             }
+            
+            // DOTween ile 1 saniye gecikmeyle parçayı yok et
+            piece.transform.DOScale(Vector3.zero, 2f) // 1 saniyede küçült
+                .SetEase(Ease.InBack) // Görsel olarak patlama efekti
+                .OnComplete(() => Destroy(piece)); // Tamamlandıktan sonra yok et
         }
 
         Explode();

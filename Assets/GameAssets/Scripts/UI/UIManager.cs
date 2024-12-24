@@ -75,7 +75,8 @@ public class UIManager : MonoBehaviour
     }
     public void QuitButton()
     {
-        Application.Quit();
+        //Application.Quit();
+        SceneManager.LoadScene(0);
     }
     
     public void RestartButton()

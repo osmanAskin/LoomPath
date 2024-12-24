@@ -141,9 +141,9 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.1f));
             rb.bodyType = RigidbodyType2D.Static;
            //dead
-           playerGFX.enabled = false;
-           _playerExplosion.PlayerDeadExplode();
-           //transform.DOScale(0.0f, 0.2f);
+           //playerGFX.enabled = false;
+           //_playerExplosion.PlayerDeadExplode();
+           transform.DOScale(0.0f, 0.2f);
             
             _gameManager.RespawnPlayer();
             
